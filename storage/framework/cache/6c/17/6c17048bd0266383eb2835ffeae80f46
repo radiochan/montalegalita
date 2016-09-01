@@ -1,0 +1,12 @@
+1469111995s:608:"a:6:{s:5:"mtime";i:1469110422;s:7:"content";s:229:"==
+<div id="footer">
+    <div class="container">
+        <hr />
+        <p class="muted credit">&copy; {{ "now"|date("Y") }} Isola dei Ragazzi - <a href="{{ 'disclaimer'|page }}">Termini d'utilizzo</a></p>
+    </div>
+</div>";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:225:"<div id="footer">
+    <div class="container">
+        <hr />
+        <p class="muted credit">&copy; {{ "now"|date("Y") }} Isola dei Ragazzi - <a href="{{ 'disclaimer'|page }}">Termini d'utilizzo</a></p>
+    </div>
+</div>";}";

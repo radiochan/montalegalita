@@ -1,0 +1,34 @@
+title = "Accedi"
+url = "/account/:code?"
+layout = "default"
+description = "Inserisci le tue credenziali per accedere ai tuoi contenuti."
+is_hidden = 0
+
+[account]
+redirect = "account"
+paramCode = "code"
+==
+{% if not user %}
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <h3>Sign in</h3>
+            {% partial __SELF__ ~ '::signin' %}
+        </div>
+
+    </div>
+
+{% else %}
+
+    {% partial __SELF__ ~ '::activation_check' %}
+
+    {% partial __SELF__ ~ '::update' %}
+
+    {% partial __SELF__ ~ '::deactivate_link' %}
+
+{% endif %}
+
+<hr />
+
+<p><a href="{{ 'forgot-password'|page }}">Password dimenticata?</a></p>

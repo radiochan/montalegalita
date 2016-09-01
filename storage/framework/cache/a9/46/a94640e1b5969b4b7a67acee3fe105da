@@ -1,0 +1,57 @@
+1469111992s:1535:"a:6:{s:5:"mtime";i:1469110447;s:7:"content";s:662:"title = "Accedi"
+url = "/account/:code?"
+layout = "default"
+description = "Inserisci le tue credenziali per accedere ai tuoi contenuti."
+is_hidden = 0
+
+[account]
+redirect = "account"
+paramCode = "code"
+==
+{% if not user %}
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <h3>Sign in</h3>
+            {% partial __SELF__ ~ '::signin' %}
+        </div>
+
+    </div>
+
+{% else %}
+
+    {% partial __SELF__ ~ '::activation_check' %}
+
+    {% partial __SELF__ ~ '::update' %}
+
+    {% partial __SELF__ ~ '::deactivate_link' %}
+
+{% endif %}
+
+<hr />
+
+<p><a href="{{ 'forgot-password'|page }}">Password dimenticata?</a></p>";s:7:"viewBag";a:0:{}s:8:"settings";a:6:{s:5:"title";s:6:"Accedi";s:3:"url";s:15:"/account/:code?";s:6:"layout";s:7:"default";s:11:"description";s:60:"Inserisci le tue credenziali per accedere ai tuoi contenuti.";s:9:"is_hidden";s:1:"0";s:10:"components";a:1:{s:7:"account";a:2:{s:8:"redirect";s:7:"account";s:9:"paramCode";s:4:"code";}}}s:4:"code";N;s:6:"markup";s:447:"{% if not user %}
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <h3>Sign in</h3>
+            {% partial __SELF__ ~ '::signin' %}
+        </div>
+
+    </div>
+
+{% else %}
+
+    {% partial __SELF__ ~ '::activation_check' %}
+
+    {% partial __SELF__ ~ '::update' %}
+
+    {% partial __SELF__ ~ '::deactivate_link' %}
+
+{% endif %}
+
+<hr />
+
+<p><a href="{{ 'forgot-password'|page }}">Password dimenticata?</a></p>";}";
